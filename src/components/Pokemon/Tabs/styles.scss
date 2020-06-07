@@ -30,6 +30,17 @@
     }
   }
 
+  .abilities, .forms {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+
+    & > div {
+      flex: 1 1 auto;
+      margin: $size-small4 / 2;
+    }
+  }
+
   .about, .stat {
     text-transform: capitalize;
   }

@@ -75,7 +75,9 @@ const Tabs = ({
               <Badget>{species.name}</Badget>
             </LabelBlock>
             <LabelBlock title="evolutions">
-              {forms.map(form => <Badget key={form.name}>{parseLabelName(form.name)}</Badget>)}
+              <div className="forms">
+                {forms.map(form => <Badget key={form.name}>{parseLabelName(form.name)}</Badget>)}
+              </div>
             </LabelBlock>
             <LabelBlock title="weight">
               <span>{weight} lbs</span>
@@ -86,7 +88,9 @@ const Tabs = ({
           </div>
         </TabsContent>
         <TabsContent active={tabActive === 3}>
-          {abilities.map(({ ability }) => <Badget key={ability.name}>{parseLabelName(ability.name)}</Badget>)}
+          <div className="abilities">
+            {abilities.map(({ ability }) => <Badget key={ability.name}>{parseLabelName(ability.name)}</Badget>)}
+          </div>
         </TabsContent>
       </div>
     </div>

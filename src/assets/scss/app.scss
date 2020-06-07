@@ -9,7 +9,10 @@ body {
   font-weight: 400;
   background-color: $red-light;
   color: $white;
-  // overflow: hidden;
+
+  @media screen and (max-width: $desktop) {
+    font-size: 105%;
+  }
 }
 
 main {

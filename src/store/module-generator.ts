@@ -1,3 +1,8 @@
+export interface FiltersInterface  {
+  offset: number,
+  limit: number,
+}
+
 const moduleGenerator = (options?: any) => ({
   loading: false,
   errors: null,
