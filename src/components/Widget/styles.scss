@@ -1,0 +1,9 @@
+@import '../../assets/scss/variables';
+
+.widget {
+  background-color: $white;
+  border-radius: $size-default;
+  box-shadow: 0 0 $size-default rgba(0, 0, 0, 0.2);
+  color: $black;
+  padding: $size-default;
+}

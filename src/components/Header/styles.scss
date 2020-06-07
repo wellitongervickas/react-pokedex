@@ -1,0 +1,51 @@
+@import '../../assets/scss/variables';
+
+.header {
+  height: $size-big4 * 2;
+
+  &, .header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-pokedex {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-pokedex-ball, .header-pokedex-ball-2, .header-pokedex-ball-3 {
+    border: $size-small4 / 2 solid $black;
+  }
+
+  .header-pokedex-ball {
+    height: $size-big4;
+    width: $size-big4;
+    background-color: $water;
+    border-radius: 100%;
+  }
+
+  .header-pokedex-ball-2, .header-pokedex-ball-3 {
+    height: $size-default;
+    width: $size-default;
+    border-radius: 100%;
+    margin-left: $size-small4;
+  }
+
+  .header-pokedex-ball-2 {
+    background-color: $red;
+  }
+
+  .header-pokedex-ball-3 {
+    background-color: $electric;
+  }
+
+  .header-navigation {
+    cursor: pointer;
+    color: $black;
+  }
+
+  .header-navigation > span {
+    margin-left: $size-default;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../assets/scss/variables';
+
+.pokemon {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $white;
+  border-radius: $size-default;
+  box-shadow: 0 0 $size-default rgba(0, 0, 0, 0.2);
+  color: $black;
+
+  .pokemon-title {
+    text-transform: capitalize;
+  }
+
+  .pokemon-details {
+    flex: 1;
+    padding: $size-default;
+    z-index: 2;
+  }
+
+  .pokemon-avatar {
+    flex: 1;
+    z-index: 0;
+    width: $size-big4 * 6;
+    height: $size-big4 * 6;
+    position: absolute;
+
+    right: -$size-big3;
+    top: -$size-big3;
+
+    border-radius: 100%;
+    background-color: $gray-light;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,92 @@
+@import '../../../assets/scss/variables';
+
+.pokemon-types {
+  border: $size-small4 / 2 solid;
+
+  text-transform: capitalize;
+  font-size: $size-small2;
+  color: $gray;
+
+  display: inline-block;
+
+  padding: $size-small4 $size-small2;
+  margin-right: $size-small4;
+
+  border-radius: $size-default;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.pokemon-types-normal {
+  border-color: $normal;
+}
+
+.pokemon-types-fire {
+  border-color: $fire;
+}
+
+.pokemon-types-water {
+  border-color: $water;
+}
+
+.pokemon-types-grass {
+  border-color: $grass;
+}
+
+.pokemon-types-electric {
+  border-color: $electric;
+}
+
+.pokemon-types-ice {
+  border-color: $ice;
+}
+
+.pokemon-types-fighting {
+  border-color: $fighting;
+}
+
+.pokemon-types-poison {
+  border-color: $poison;
+}
+
+.pokemon-types-ground {
+  border-color: $ground;
+}
+
+.pokemon-types-flying {
+  border-color: $flying;
+}
+
+.pokemon-types-psychic {
+  border-color: $psychic;
+}
+
+.pokemon-types-bug {
+  border-color: $bug;
+}
+
+.pokemon-types-rock {
+  border-color: $rock;
+}
+
+.pokemon-types-ghost {
+  border-color: $ghost;
+}
+
+.pokemon-types-dark {
+  border-color: $dark;
+}
+
+.pokemon-types-dragon {
+  border-color: $dragon;
+}
+
+.pokemon-types-steel {
+  border-color: $steel;
+}
+
+.pokemon-types-fairy {
+  border-color: $fairy;
+}

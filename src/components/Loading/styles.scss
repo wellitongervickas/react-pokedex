@@ -1,0 +1,90 @@
+@import '../../assets/scss/variables';
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $black;
+
+
+  .loading-progress-label {
+    color: $black;
+    font-size: $size-default;
+  }
+
+  .loading-top, .loading-bottom {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .loading-top {
+    animation: loadingInTop 1s ease-in forwards;
+    background-color: $red;
+  }
+
+  .loading-bottom {
+    animation: loadingInBottom 1s ease-in forwards;
+  }
+
+  .loading-ball {
+    background-color: $black;
+    position: relative;
+    height: $size-small2;
+    z-index: 2;
+
+    .loading-ball-rounded, .loading-ball-rounded-child {
+      border-radius: 100%;
+    }
+
+    .loading-ball-rounded {
+      width: $size-big5 * 4;
+      height: $size-big5 * 4;
+      border: $size-small2 solid $black;
+
+      position: absolute;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+      left: 0;
+      right: 0;
+      top: -$size-big5 * 2;
+
+      .loading-ball-rounded-child {
+        height: $size-big4 * 2;
+        width: $size-big4 * 2;
+        animation: borderLighting 1s ease-in infinite;
+      }
+    }
+  }
+
+  .loading-ball-rounded, .loading-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+  }
+
+  &.loading-out {
+    .loading-ball {
+      animation: fadeOut 0.1s linear forwards;
+    }
+    .loading-top {
+      animation: loadingOutTop 1s ease-out forwards;
+    }
+
+    .loading-bottom {
+      animation: loadingOutBottom 1s ease-out forwards;
+    }
+  }
+}

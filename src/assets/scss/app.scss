@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'base';
+@import 'reset';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  background-color: $red-light;
+  color: $white;
+  // overflow: hidden;
+}
+
+main {
+  margin: $size-default;
+
+  @media screen and (min-width: $desktop) {
+    margin: 0 auto;
+    width: 360px;
+  }
+}
+
