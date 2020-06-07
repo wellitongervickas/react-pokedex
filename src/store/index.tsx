@@ -28,7 +28,7 @@ const StoreContextProvider = ({ children }: StoreContextProviderInterface) => {
     pokemon,
   });
 
-  const setStore = useCallback(async (store: string, payload: any) => {
+  const setStore = useCallback((store: string, payload: any) => {
     try {
       setStoreState((r: any) => {
         const [prefix, sufix] = store.split('/');

@@ -15,6 +15,7 @@ import context from 'store';
 import Header from 'components/Header';
 import Widget from 'components/Widget';
 import PokemonBox from 'components/Pokemon';
+import Tabs from 'components/Pokemon/Tabs';
 
 import Loading from 'components/Loading';
 
@@ -57,22 +58,33 @@ const Pokemon = () => {
     <main>
       <Header />
       <Loading label={loading} open={!loading.length} />
-
       {showDetails && (
-      <>
-        <div className="pokemon-intro">
-          <PokemonBox
-            loading={states.pokemon.loading}
-            name={details.name}
-            sprites={details.sprites}
-            types={details.types}
-            id={details.id}
-          />
-        </div>
-        <div className="pokemon-details">
-          <Widget>Pokemon</Widget>
-        </div>
-      </>
+        <>
+          <div className="pokemon-intro">
+            <PokemonBox
+              loading={states.pokemon.loading}
+              name={details.name}
+              sprites={details.sprites}
+              types={details.types}
+              id={details.id}
+            />
+          </div>
+          <div className="pokemon-details">
+            <div className="pokemon-details-exp">
+              {details.base_experience}
+            </div>
+            <Widget>
+              <Tabs
+                height={states.pokemon.read.height}
+                species={states.pokemon.read.species}
+                weight={states.pokemon.read.weight}
+                abilities={states.pokemon.read.abilities}
+                stats={states.pokemon.read.stats}
+                forms={states.pokemon.read.forms}
+              />
+            </Widget>
+          </div>
+        </>
       )}
     </main>
   );

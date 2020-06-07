@@ -32,6 +32,7 @@ const Pokedex = () => {
       const result = await Promise
         .all(list.map((pokemon) => client.get(`pokemon/${pokemon.id}`)))
         .then((r:any) => list.map((pokemon) => {
+          setLoadingText('');
           const details = r.find((p: any) => p.id === pokemon.id);
 
           return {
@@ -41,7 +42,6 @@ const Pokedex = () => {
           }
         }));
 
-      setLoadingText('');
 
       setStore('pokemon/loading', false);
       setStore('pokemon/list', states.pokemon.list.concat(result));
@@ -77,7 +77,7 @@ const Pokedex = () => {
       window.removeEventListener('scroll', handleScroll);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [setStore]);
 
   return (
     <main>

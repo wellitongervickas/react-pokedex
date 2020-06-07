@@ -1,0 +1,8 @@
+@import '../../assets/scss/variables';
+
+.badget {
+  display: inline-block;
+  border: 1px solid $gray-light;
+  border-radius: $size-default;
+  padding: $size-small4 $size-small2;
+}

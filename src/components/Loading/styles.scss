@@ -76,6 +76,8 @@
   }
 
   &.loading-out {
+    animation: opacityOut 1s ease-in-out forwards;
+
     .loading-ball {
       animation: fadeOut 0.1s linear forwards;
     }

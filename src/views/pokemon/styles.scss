@@ -1,5 +1,29 @@
 @import '../../assets/scss/variables';
 
 .pokemon-intro {
-  margin-bottom: $size-default;
+  margin-bottom: $size-big4 * 2;
+}
+
+.pokemon-details {
+  position: relative;
+
+  .pokemon-details-exp {
+    position: absolute;
+
+    right: 0;
+    top: -$size-big3 * 2;
+
+    width: $size-big3 * 2;
+    height: $size-big3 * 2;
+    background-color: $red;
+    border: $size-small2 / 2 solid $white;
+    color: $white;
+
+    font-size: $size-small2;
+
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

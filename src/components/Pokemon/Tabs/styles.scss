@@ -1,0 +1,78 @@
+@import '../../../assets/scss/variables';
+
+.tabs {
+  .tabs-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tabs-nav-item {
+      cursor: pointer;
+      padding-bottom: $size-small2;
+      margin-bottom: $size-small2;
+
+      &.tabs-nav-item-active {
+        font-weight: 900;
+        border-bottom:$size-small4 / 2 solid $red;
+      }
+    }
+  }
+
+  .tabs-content {
+    margin-top: $size-big4;
+
+    .tabs-content-item {
+      display: none;
+
+      &.tabs-content-item-active {
+        display: block
+      }
+    }
+  }
+
+  .about, .stat {
+    text-transform: capitalize;
+  }
+
+  .stat h4, .about .about-item {
+    margin-bottom: $size-default;
+  }
+
+  .about h4 {
+    margin-bottom: $size-small4;
+  }
+
+  .stat {
+    margin-bottom: $size-small2;
+    padding-bottom: $size-small2;
+    border-bottom: $size-small4 / 4 solid $gray-light;
+
+    &:last-of-type {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+
+    .stat-progress {
+      position: relative;
+      background-color: $gray-light;
+      border-radius: $size-default;
+      padding: $size-small4 $size-small2;
+      font-size: $size-small2;
+      overflow: hidden;
+    }
+
+    .stat-progress-current {
+      background-color: $bug;
+      padding: $size-small4 $size-small2;
+      position: absolute;
+      transform: skew(16deg, 0deg);
+
+      top: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0.5;
+    }
+  }
+}

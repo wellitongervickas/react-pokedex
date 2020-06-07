@@ -1,14 +1,5 @@
 import moduleGenerator from "store/module-generator";
 
-export interface PokemonModuleFiltersInterface {
-  offset: number,
-  limit: number,
-}
+const pokemonModule = moduleGenerator();
 
-export interface PokemonModuleInterface {
-  list: any[],
-  read: any,
-  filters: PokemonModuleFiltersInterface,
-}
-
-export default moduleGenerator();
+export default pokemonModule;

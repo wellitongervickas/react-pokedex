@@ -1,0 +1,14 @@
+@import '../../assets/scss/variables';
+
+.label-block {
+  h4 {
+    margin-bottom: $size-small4;
+    text-transform: capitalize;
+  }
+
+  margin-bottom: $size-default;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
