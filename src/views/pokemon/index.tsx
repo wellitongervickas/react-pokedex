@@ -32,10 +32,10 @@ const Pokemon = () => {
 
     await client.get(`pokemon/${id}`)
       .then((r: any) => {
-        setLoading('');
-
         setStore('pokemon/read', r);
         setStore('pokemon/loading', false);
+
+        setLoading('');
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

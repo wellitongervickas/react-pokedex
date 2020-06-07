@@ -22,7 +22,7 @@ const Loading = ({ label, open }: LoadingInterface) => {
 
       setTimeout(() => {
         setShow(false);
-      }, 1000);
+      }, 800);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);

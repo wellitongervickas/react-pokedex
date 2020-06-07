@@ -19,7 +19,7 @@
   }
 
   .tabs-content {
-    margin-top: $size-big4;
+    margin-top: $size-default;
 
     .tabs-content-item {
       display: none;
@@ -35,7 +35,7 @@
   }
 
   .stat h4, .about .about-item {
-    margin-bottom: $size-default;
+    margin-bottom: $size-small2;
   }
 
   .about h4 {
@@ -45,7 +45,6 @@
   .stat {
     margin-bottom: $size-small2;
     padding-bottom: $size-small2;
-    border-bottom: $size-small4 / 4 solid $gray-light;
 
     &:last-of-type {
       border-bottom: 0;
