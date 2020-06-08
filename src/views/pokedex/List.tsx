@@ -15,29 +15,8 @@ const PokedexList = () => {
   const list = useRef(null);
   const { states } = useContext(context);
 
-  const handleScroll = () => {
-    // // if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    // //   console.log('bottom');
-    // // }
-
-    // const { offsetHeight, scrollHeight }:any = list.current;
-
-    // console.log(list.current)
-
-    // console.log(offsetHeight);
-
-    // console.log(scrollHeight)
-
-    // // if (list && list.current) {
-    // //   console.log();
-    // // }
-
-    console.log(document.body.offsetHeight);
-  };
-
   return (
     <ul
-      onScroll={handleScroll}
       className="list-unstyled pokedex-list"
       ref={list}
     >
