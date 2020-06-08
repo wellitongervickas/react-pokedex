@@ -11,10 +11,9 @@ interface LoadingInterface {
   open?: boolean,
 };
 
-const Loading = ({ label, open }: LoadingInterface) => {
+const Loading = ({ label, open = false }: LoadingInterface) => {
   const [show, setShow] = useState(true);
   const [classes, setClasses] = useState(['loading']);
-
 
   useEffect(() => {
     if (open) {
@@ -36,17 +35,14 @@ const Loading = ({ label, open }: LoadingInterface) => {
         </div>
       </div>
       <div className="loading-bottom">
-        <div className="loading-progress-label">
-          <span>{label}</span>
-        </div>
+        {label && (
+          <div className="loading-progress-label">
+            <span>{label}</span>
+          </div>
+        )}
       </div>
     </div>
   ) : null;
-};
-
-Loading.defaultProps = {
-  label: 'Loading...',
-  open: false,
 };
 
 export default Loading;
