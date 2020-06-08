@@ -1,19 +1,16 @@
 language: node_js
-
 node_js:
 - '11'
 cache:
   directories: node_modules
-
 before_script:
-  - npm install
-
+- npm install
 script:
-  - npm test
+- npm test
 deploy:
   provider: heroku
   api_key:
-    secure: RdGAxn6Y8PJ10RtzR6p+vzMCNMq/uf6KYwiF+ziaE9J3FOc1LIq4bSPaVw4UbSlv/8sG25KAON9F5babeABkaCSGsg7/ND8IaQ5OmqJObZfQsAOh2MpnzviMkIt7M857A7YcNkQFQedtGahu+TG84wlLk+REzWHFAlRqecGRkcoTY2/3udFgikZRR17GXMIqv3phJVMKUJ837ID/0NQRS9gZmf+Fx6oWUXoFi+so9GMarAi+2UB8h10YuNYkjeBNl//AOH+RiD6yz/VEl2QlCaGGMupa7Xhl8KIENhGpNix7OEEBHRIBCaDbZ5T0jUCgTs+bFkV8vEGvtKHYXwDs0JYY8Ig2vNV8hPQYAet/mO+YlZ9YFWbBgSrqoaveONMyc1ZGfNIz4K++GFDPQMxuCnrvD8FEtCdtfvbILU8y0B0X4neRjU0PNJ3856oEPXW9bEIwXsgxY4KrEufaA7ObjSWugt+uukO25q4q81yrLL6oR6t5yjpcw/09v9nmawHt5GLmqO5IHFNDHJN8yUgdWoYpAHBxpBuPmDA4ORokb+QkmUoIcKdYST6BXoXsWXyfjBSUK6xZYi3Elu+6GlmIsu5pfISNfpWkiZy6qCpdH1oQRRVJWI6QD/UHdoPHBgb35Vr9ogAWHJ+zeP/8/EjAaCM+ubg4wYzsdxMFPWPKxNk=
+    secure: WoXeG/g5FzLy96oB/xkAIHdTe+CU7WB56iTjrbdSaRoedTl4KJv+BHb1UXcEHxqMLAdkci9DrZfxSct1EgDYkKf12yc2FFnKuVFOdC6Z8Qr2r/IbH8g9/0rjB6LE4AZtyEVCIz60e9Fw8ClLgt4Um250IWv0BnBBjQ4VXBjA/1/WS4D/M1/7wduGJTmDbWuculU35Y6a0rsOyY36FqshObCp29HBc7Fadv1A50TMaFmvbuG4QDR7F0A73dDPmG1NDQAqTzPQBrT4kkhDnnrR6Qdhh10FYfr9Dr2H22nBzEipXpFaIs4KWzZDtAYwRQD59skW+/nNEF3uRttxFGX2ET+BhmdFpK+1mu8LhRCgwaExONCzIPSCYMVZqD9wlzmS8no2riSCeg185VkcXIwx3VSqlnIov3ZuRfs8xCqU9F6hj/nJmJ3stG3dLCDTyylKFUlVo/+rlT5dNG171GDIVm22rYx67yqazX7bs+dFKWMNqslvG9mxc9M+oguDMgn5lugcxXCcIboyyQzG+0gSu1LPDh+whwQoKFQf3PrGXkH3DPWDNGIMpP4WUqXBbSyFY4zX8imrNRxB4gSGJxY2LgAJIcWkHewVoVN3R0h8sO7rFda5EFDPZraBblq6bEj1Sme2HkfhlQzgc2BUOMQQ8KkVX+subXr0m6qo8VOsSOU=
   app: react-pokedex
   on:
     repo: wellitongervickas/react-pokedex
