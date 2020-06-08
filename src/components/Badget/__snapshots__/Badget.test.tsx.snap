@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders badget component 1`] = `
+exports[`Component Badget renders badget component 1`] = `
 <div
   class="badget"
 >
