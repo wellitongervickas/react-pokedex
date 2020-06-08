@@ -48,6 +48,15 @@ const Pokedex = () => {
       setStore('pokemon/loading', false);
       setStore('pokemon/list', states.pokemon.list.concat(result));
       setStore('pokemon/filters', filters);
+
+      const scroll = document.body.getBoundingClientRect();
+
+      if (filters.offset > 0) {
+        window.scroll({
+          top: Math.abs(scroll.y) + 200,
+          behavior: 'smooth',
+        });
+      }
     });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
