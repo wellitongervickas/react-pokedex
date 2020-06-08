@@ -8,4 +8,5 @@ it('renders badget component', () => {
 
   expect(getByText('Hello World')).toBeInTheDocument();
   expect(container.firstElementChild?.classList.contains('badget')).toBeTruthy();
+  expect(container.firstElementChild).toMatchSnapshot();
 });
