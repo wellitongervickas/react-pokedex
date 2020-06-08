@@ -8,6 +8,10 @@
   position: relative;
 
   .pokemon-details-exp {
+    font-style: italic;
+    font-weight: 900;
+    font-size: $size-default;
+
     position: absolute;
 
     right: 0;
@@ -18,8 +22,6 @@
     background-color: $red;
     border: $size-small2 / 2 solid $white;
     color: $white;
-
-    font-size: $size-small2;
 
     border-radius: 100%;
     display: flex;

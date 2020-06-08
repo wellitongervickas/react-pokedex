@@ -1,11 +1,12 @@
 import React from 'react';
 import { Router } from 'react-router-dom'
 import { createMemoryHistory } from 'history'
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 
 import '@testing-library/jest-dom/extend-expect'
 
 import Header from '.';
+
 describe('Component Header', () => {
   const history = createMemoryHistory();
 
@@ -37,5 +38,47 @@ describe('Component Header', () => {
     expect(tree?.children[2].classList.contains('header-pokedex-ball-3')).toBeTruthy();
 
     expect(tree).toMatchSnapshot();
+  });
+
+  it('should render with use navigation', () => {
+    const { container } = render(
+      <Router history={history}>
+        <Header useNavigation={true} />
+      </Router>
+    );
+
+    const tree = container.firstElementChild?.children[1];
+
+    expect(tree?.classList.contains('header-navigation')).toBeTruthy();
+    expect(tree).toMatchSnapshot();
+
+  });
+
+  it('should render without use navigation', () => {
+    const { container } = render(
+      <Router history={history}>
+        <Header useNavigation={false} />
+      </Router>
+    );
+
+    const tree = container.firstElementChild?.children[1];
+
+    expect(tree).toBeUndefined();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('should handle event back', () => {
+    history.push('/new-route');
+    expect(history.location.pathname).toBe('/new-route');
+
+    const { getByText } = render(
+      <Router history={history}>
+        <Header />
+      </Router>
+    );
+
+    fireEvent.click(getByText(/Go back/i));
+
+    expect(history.location.pathname).toBe('/');
   });
 });
