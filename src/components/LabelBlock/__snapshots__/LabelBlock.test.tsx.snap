@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component LabelBlock renders LabelBlock component 1`] = `
+<div
+  class="label-block"
+>
+  <h4>
+    Hi
+  </h4>
+  <div
+    class="label-block-content"
+  >
+    Hello World
+  </div>
+</div>
+`;
+
+exports[`Component LabelBlock should render LabelBlock without title 1`] = `
+<div
+  class="label-block-content"
+>
+  Hello World
+</div>
+`;
